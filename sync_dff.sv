@@ -11,12 +11,15 @@ module sync_dff
 
 // =======================================================================
 // Declarations & Parameters
-
-assign sig_out = sig_in_qq;
+  
+logic [ WIDTH - 1:0 ] sig_in_q;
+logic [ WIDTH - 1:0 ] sig_in_qq;
 
 // =======================================================================
 // Logic
 
+assign sig_out = sig_in_qq;
+  
 always_ff @( posedge clk )
 
     if ( !rst_n )

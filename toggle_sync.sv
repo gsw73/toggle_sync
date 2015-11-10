@@ -1,3 +1,7 @@
+`include "toggle_flop.sv"
+`include "edge_det.sv"
+`include "sync_dff.sv"
+
 module toggle_sync
 (
     input logic clka,
